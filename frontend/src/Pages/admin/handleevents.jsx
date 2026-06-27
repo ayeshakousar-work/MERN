@@ -10,7 +10,7 @@ export default function EventManagement() {
   const [endTime, setEndTime] = useState('');
   const [description, setDescription] = useState('');
   const [selectedEventId, setSelectedEventId] = useState(null);
-  const BASE_URL =  process.env.REACT_APP_API_URL || "http://localhost:5000";
+  const BASE_URL =  process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     fetchEvents();
