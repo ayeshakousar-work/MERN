@@ -19,7 +19,7 @@ const BASE_URL =
     }
 
     try {
-      const response = await axios.post(`${BASE_URL}/user/login`, { email, password });
+      const response = await axios.post(`${BASE_URL}user/login`, { email, password });
       // Handle successful login
       console.log(response.data);
       // Display success message
