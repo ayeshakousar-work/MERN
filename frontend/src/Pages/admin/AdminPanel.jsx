@@ -7,7 +7,7 @@ export default function Panel() {
   const [adminInfo, setAdminInfo] = useState({ name: '', image: '' });
   const [loading, setLoading] = useState(true);
 
-  const BASE_URL = 'http://localhost:5000';
+  const BASE_URL =  process.env.REACT_APP_API_URL || "http://localhost:5000";
   const navigate = useNavigate();
 
   useEffect(() => {
