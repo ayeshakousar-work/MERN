@@ -6,7 +6,7 @@ export default function Home() {
   const [events, setEvents] = useState([]);
   const [games, setGames] = useState([]);
 const BASE_URL =
-  process.env.REACT_APP_API_URL || "http://localhost:5000";  const navigate = useNavigate();
+  process.env.REACT_APP_API_URL ;  const navigate = useNavigate();
 
   // Function to fetch events
   const fetchEvents = async () => {
