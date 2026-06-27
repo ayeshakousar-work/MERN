@@ -19,7 +19,7 @@ export default function AdminLeagueForm() {
 
   const fetchGames = async () => {
     try {
-      const response = await axios.get(`${BASE_URL}/user/games`, getAuthConfig());
+      const response = await axios.get(`${BASE_URL}user/games`, getAuthConfig());
       setGames(response.data);
     } catch (error) {
       console.error('Error fetching games:', error);
@@ -28,7 +28,7 @@ export default function AdminLeagueForm() {
 
   const fetchLeagues = async () => {
     try {
-      const response = await axios.get(`${BASE_URL}/admin/getLeagues`, getAuthConfig());
+      const response = await axios.get(`${BASE_URL}admin/getLeagues`, getAuthConfig());
       setLeagues(response.data);
     } catch (error) {
       console.error('Error fetching leagues:', error);
@@ -44,7 +44,7 @@ export default function AdminLeagueForm() {
     const confirmed = window.confirm('Are you sure you want to add this league?');
     if (confirmed) {
     try {
-      await axios.post(`${BASE_URL}/admin/addLeagues`, {
+      await axios.post(`${BASE_URL}admin/addLeagues`, {
         game,
         startTime,
         status,
@@ -62,7 +62,7 @@ export default function AdminLeagueForm() {
     const confirmed = window.confirm('Are you sure you want to update this league?');
     if (confirmed) {
     try {
-      await axios.put(`${BASE_URL}/admin/update/${selectedLeagueId}`, {
+      await axios.put(`${BASE_URL}admin/update/${selectedLeagueId}`, {
         game,
         startTime,
         status,
@@ -83,7 +83,7 @@ export default function AdminLeagueForm() {
       const config = getAuthConfig();
       if (!config) return; // If getAuthConfig returns null, exit the function
   
-      await axios.delete(`${BASE_URL}/admin/deleteLeagues`, {
+      await axios.delete(`${BASE_URL}admin/deleteLeagues`, {
         headers: config.headers,
         data: { game, status } // Ensure the property name matches what the backend expects
       });
