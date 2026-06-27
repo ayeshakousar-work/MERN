@@ -23,7 +23,7 @@ const ChangePassword = () => {
     if (confirmDelete) {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.put(`${BASE_URL}/user/changePassword`, formData, {
+      const response = await axios.put(`${BASE_URL}user/changePassword`, formData, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
