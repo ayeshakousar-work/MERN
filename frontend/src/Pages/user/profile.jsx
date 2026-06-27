@@ -21,7 +21,7 @@ const UserProfile = () => {
     const fetchUser = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`${BASE_URL}/user/userProfile`, {
+        const response = await axios.get(`${BASE_URL}user/userProfile`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -50,7 +50,7 @@ const UserProfile = () => {
     if (confirmed) {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.put(`${BASE_URL}/user/userUpdate`, formData, {
+      const response = await axios.put(`${BASE_URL}user/userUpdate`, formData, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -72,7 +72,7 @@ const UserProfile = () => {
     if (confirmDelete) {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.delete(`${BASE_URL}/user/deleteAccount`, {
+        const response = await axios.delete(`${BASE_URL}user/deleteAccount`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
