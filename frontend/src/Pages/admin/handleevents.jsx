@@ -18,7 +18,7 @@ export default function EventManagement() {
 
   const fetchEvents = async () => {
     try {
-      const response = await axios.get(`${BASE_URL}/admin/events`);
+      const response = await axios.get(`${BASE_URL}admin/events`);
       setEvents(response.data);
     } catch (error) {
       console.error('Error fetching events:', error);
@@ -32,9 +32,9 @@ export default function EventManagement() {
     try {
      
       if (selectedEventId) {
-        await axios.put(`${BASE_URL}/admin/updateevents/${selectedEventId}`, eventData);
+        await axios.put(`${BASE_URL}admin/updateevents/${selectedEventId}`, eventData);
       } else {
-        await axios.post(`${BASE_URL}/admin/addevents`, eventData);
+        await axios.post(`${BASE_URL}admin/addevents`, eventData);
       }
       fetchEvents();
       setEventName('');
@@ -53,7 +53,7 @@ export default function EventManagement() {
     const confirmed = window.confirm('Are you sure you want to delete this event?');
     if (confirmed) {
       try {
-        await axios.delete(`${BASE_URL}/admin/deleteevents/${id}`);
+        await axios.delete(`${BASE_URL}admin/deleteevents/${id}`);
         fetchEvents();
       } catch (error) {
         console.error('Error deleting event:', error);
