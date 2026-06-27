@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; 
 import './league.css';
 const BASE_URL =
-  process.env.REACT_APP_API_URL || "http://localhost:5000";
+  process.env.REACT_APP_API_URL;
 const Leagues = () => {
   const [leagues, setLeagues] = useState([]);
   const navigate = useNavigate();
