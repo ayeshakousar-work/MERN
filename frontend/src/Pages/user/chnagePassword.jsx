@@ -3,8 +3,8 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './profile.css';
 
-const BASE_URL = 'http://localhost:5000';
-
+const BASE_URL =
+  process.env.REACT_APP_API_URL || "http://localhost:5000";
 const ChangePassword = () => {
   const [formData, setFormData] = useState({
     oldPassword: '',
