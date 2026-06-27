@@ -19,7 +19,7 @@ export default function Panel() {
           return;
         }
 
-        const response = await axios.get(`${BASE_URL}/admin/adminProfile`, {
+        const response = await axios.get(`${BASE_URL}admin/adminProfile`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
