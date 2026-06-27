@@ -4,7 +4,7 @@ import { useNavigate} from 'react-router-dom';
 import './profile.css';
 
 const BASE_URL =
-  process.env.REACT_APP_API_URL || "http://localhost:5000";
+  process.env.REACT_APP_API_URL;
 const UserProfile = () => {
   const [user, setUser] = useState(null);
   const [formData, setFormData] = useState({
