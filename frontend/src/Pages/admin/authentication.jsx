@@ -19,7 +19,7 @@ const AdminLogin = ({ onLogin }) => {
     }
 
     try {
-      const response = await axios.post(`${BASE_URL}/admin/login`, { email, password });
+      const response = await axios.post(`${BASE_URL}admin/login`, { email, password });
       // Handle successful login
       console.log(response.data);
       // Display success message
