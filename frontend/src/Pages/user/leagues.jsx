@@ -14,7 +14,7 @@ const Leagues = () => {
       // Get the token from local storage
       const token = localStorage.getItem('token');
       // Fetch leagues data from the backend
-      const response = await axios.get(`${BASE_URL}user/leagues`, {
+      const response = await axios.get(`${BASE_URL}/user/leagues`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
