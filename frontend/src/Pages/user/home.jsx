@@ -27,7 +27,7 @@ const handleTry = async()=>{
   // Function to fetch games
   const fetchGames = async () => {
     try {
-      const response = await axios.get(`${BASE_URL}user/games`);
+      const response = await axios.get(`${BASE_URL}/user/games`);
       if (response.status === 200) {
         setGames(response.data);
       } else {
