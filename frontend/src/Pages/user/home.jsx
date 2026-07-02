@@ -11,7 +11,7 @@ const BASE_URL =
   // Function to fetch events
   const fetchEvents = async () => {
     try {
-      const response = await axios.get(`${BASE_URL}user/UpcomingEvent`);
+      const response = await axios.get(`${BASE_URL}/user/UpcomingEvent`);
       if (response.status === 200) {
         setEvents(response.data);
       } else {
